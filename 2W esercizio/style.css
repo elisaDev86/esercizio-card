@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+}
+
+#card{
+    position: relative;
+    background-color:white;
+    width: 400px;
+    height: 550px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: auto;
+    margin-block: 50px;
+}
+
+img{
+    width: 400px;
+    height: 550px;
+    object-fit: cover;
+}
+
+#save{
+    background-color: red;
+    color:white;
+    font-size: larger;
+    font-weight: bold;
+    border-style: none;
+    border-radius: 30px;
+    padding: 18px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-block: 20px;
+    margin-right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease; /* per un'animazione fluida  */
+}
+
+#save:hover {
+    transform: translateY(10px); /*  button in basso di 10px al passaggio del mouse */
+}
+
+#scritta{
+    background-color: whitesmoke;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+    padding: 10px;
+    font-weight: bolder;
+    font-size: medium;
+    transition: transform 0.3s ease;
+    position: absolute;
+    bottom:0;
+    left: 0;
+    margin-block: 20px;
+    margin-left: 10px;
+}
+
+#scritta:hover {
+    transform: translateY(-10px); 
+}
+
+#freccia{
+    background-color: whitesmoke;
+    border-style: none;
+    cursor: pointer;
+    width: 3em;
+    height:3em ;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    transition: transform 0.3s ease;
+    bottom: 0;
+    left: 0;
+    margin-block: 20px;
+    margin-left: 150px;
+    font-size: large;
+    font-weight: bold;
+}
+
+#freccia:hover {
+    transform: translateY(-10px); 
+}
+
+
+#pallini{
+    background-color: whitesmoke;
+    border-style: none;
+    cursor: pointer;
+    width: 3em;
+    height:3em ;
+    border-radius: 50%;
+    padding: 10px;
+    position: absolute;
+    transition: transform 0.3s ease;
+    bottom: 0;
+    left: 0;
+    margin-block: 20px;
+    margin-left: 250px;
+    font-size: large;
+    font-weight: bold;
+}
+
+#pallini:hover {
+    transform: translateY(-10px); 
+}
+
+.fa-solid {
+    font-weight: bold;
+    font-size: x-large;
+    color: black;
+}
+
+#save,
+#scritta,
+#freccia,
+#pallini {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, transform 0.3s ease; 
+}
+
+/* Quando il mouse passa su #card i sono pulsanti visibili */
+#card:hover #save,
+#card:hover #scritta,
+#card:hover #freccia,
+#card:hover #pallini {
+    opacity: 1;
+    visibility: visible;
+}
